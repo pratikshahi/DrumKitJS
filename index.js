@@ -3,7 +3,14 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++)
 
 function handleClick() {
   var buttonInnerHTML = this.innerHTML;
-  switch (buttonInnerHTML) {
+  audioSelector(buttonInnerHTML);
+}
+document.addEventListener("keydown", function (event) {
+  
+  audioSelector(event.key);
+});
+function audioSelector(char) {
+  switch (char) {
     case "w":
       var tom1 = new Audio("sounds/tom-1.mp3");
       tom1.play();
@@ -38,6 +45,3 @@ function handleClick() {
       break;
   }
 }
-document.addEventListener("keypress",function () {
-alert("key was pressed");    
-})
