@@ -38,3 +38,6 @@ function handleClick() {
       break;
   }
 }
+document.addEventListener("keypress",function () {
+alert("key was pressed");    
+})
