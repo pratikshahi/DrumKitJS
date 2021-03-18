@@ -4,10 +4,11 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++)
 function handleClick() {
   var buttonInnerHTML = this.innerHTML;
   audioSelector(buttonInnerHTML);
+  buttonAnimation(buttonInnerHTML);
 }
 document.addEventListener("keydown", function (event) {
-  
   audioSelector(event.key);
+  buttonAnimation(event.key);
 });
 function audioSelector(char) {
   switch (char) {
@@ -44,4 +45,10 @@ function audioSelector(char) {
       console.log(buttonInnerHTML);
       break;
   }
+}
+function buttonAnimation(currentKey) {
+ document.querySelector("."+currentKey).classList.add("pressed");   
+ setTimeout(function(){
+    document.querySelector("."+currentKey).classList.remove("pressed");
+ },100);
 }
