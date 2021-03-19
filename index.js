@@ -47,8 +47,8 @@ function audioSelector(char) {
   }
 }
 function buttonAnimation(currentKey) {
- document.querySelector("."+currentKey).classList.add("pressed");   
- setTimeout(function(){
-    document.querySelector("."+currentKey).classList.remove("pressed");
- },100);
+  document.querySelector("." + currentKey).classList.add("pressed");
+  setTimeout(function () {
+    document.querySelector("." + currentKey).classList.remove("pressed");
+  }, 100);
 }
